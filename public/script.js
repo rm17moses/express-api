@@ -6,6 +6,10 @@ document.addEventListener('alpine:init', () => {
                 language : "English",
                 new_language: '',
                 new_greet: '',
+                new_message: '',
+                validMessage: 'Enter a valid language and greeting',
+                open: false,
+                show: false,
                 greet() {
         
                     //call the API and get greeting back
@@ -19,8 +23,6 @@ document.addEventListener('alpine:init', () => {
                         } else {
                             this.greeting = result.data.message;
                         }
-        
-                        this.greeting = result.data.message
                     })
         
                     this.greeting = this.username
@@ -28,19 +30,26 @@ document.addEventListener('alpine:init', () => {
 
                 addGreeting(){
 
-                    return axios
-                                .post('https://first-api-greet.onrender.com/api/greet', {
+                         axios
+                                .post('http://localhost:4009/api/greet', {
                                     "language": this.new_language,
                                     "greeting": this.new_greet
                                 })
                                 .then(result => {
-                                    console.log(result.data)
+                                    if (this.new_language && this.new_greet) {
+                                    //console.log(result.data)
+                                    this.new_message = result.data.message;
+                                    } else {
+                                        this.new_message = 'Enter valid language and greeting'
+                                    }
                                 });
+                                this.new_message = this.validMessage;
                 },
 
             init() {
                 
                 this.greet();
+                this.addGreeting();
                 
             }
         }

@@ -53,6 +53,17 @@ app.post("/api/greet", function (req, res) {
 
 });
 
+/*
+app.post("/api/language", function(req, res) {
+    const new_language = req.body.new_language;
+    const new_greet = req.body.new_greet;
+
+    res.json({
+        new_message: `The language added is ${new_language} and the greeting is ${new_greet}`
+    })
+})
+*/
+
 //Call the API - http://localhost:4009/api/greet/Moses (Not dynamic - uses colons)
 app.get("/api/greet/:username", function (req, res) {
     console.log(req.params);

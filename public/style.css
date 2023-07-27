@@ -7,10 +7,6 @@ body {
     color: white;
 }
 
-.z-depth-5 {
-    height: 100px;
-}
-
 span {
     color: black;
 }
@@ -20,5 +16,21 @@ span {
 }
 
 .greetMessage {
-    margin-top: 4em;
+    margin-top: 2em;
+    background-color: crimson;
+    color: white;
+    text-align: center;
 }
+
+.greetMess {
+    margin-top: 2em;
+    background-color: darkolivegreen;
+    color: white;
+    text-align: center;
+}
+
+h4 {
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+}
+

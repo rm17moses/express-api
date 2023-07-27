@@ -27,3 +27,12 @@ Content-Type: application/json
     "language": "French",
     "greeting": "Bonjour"
 }
+
+### 
+POST http://localhost:4009/api/language
+Content-Type: application/json
+
+{
+    "new_language": "French",
+    "new_greet": "Bonjour"
+}

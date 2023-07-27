@@ -18,10 +18,6 @@
 
     <div class="main" x-data="LanguageWidget" >
 
-        <div x-show="open">
-            <b><p class="greetMessage" x-text="greeting" ></p></b>
-        </div>
-
         <div>
             <p>
                 <label>
@@ -62,16 +58,21 @@
         <div class="input-field col s6">
             <input id="username" type="text" x-model="username" class="validate">
             <label for="username">Type your username</label>
-            <button x-on:click="greet(), open = ! open">Greet</button>
+            <button x-on:click="greet()">Greet</button>
+          </div>
+          <div class="col s6">
+           <!-- <div x-show="open">  --> 
+              <b><p class="greetMessage" x-text="greeting" ></p></b>
+         <!-- </div> -->
           </div>
         </div>
 
         <div>
             <h5>Add a language</h5>
 
-            <div x-show="show">
+        <!--    <div x-show="show"> -->
                 <b><p class="greetMess" x-text="new_message"></p></b>
-            </div>
+        <!--     </div> -->
             <div class="row">
                 <div class="input-field col s6">
                 <input id="new_language" type="text" x-model="new_language" class="validate">
@@ -82,7 +83,7 @@
                 <label for="new_greet">Type Greeting</label>
                 </div>
                 <div>
-                <button x-on:click="addGreeting(), show = ! show">Add Language</button>
+                <button x-on:click="addGreeting()" >Add Language</button>
                 </div>
             </div>
             

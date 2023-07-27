@@ -29,7 +29,7 @@ document.addEventListener('alpine:init', () => {
                 addGreeting(){
 
                     return axios
-                                .post('http://localhost:4009/api/greet', {
+                                .post('https://first-api-greet.onrender.com/api/greet', {
                                     "language": this.new_language,
                                     "greeting": this.new_greet
                                 })

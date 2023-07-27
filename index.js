@@ -13,8 +13,7 @@ app.get("/", function (req, res) {
 */
 
 const greetings = {
-    'English': 'Hello',
-    if ()
+    'English': 'Hello'
 }
 
 //Call the API - http://localhost:4009/api/greet?username=Moses (Dynamic - uses question marks)
@@ -34,9 +33,9 @@ app.get("/api/greet", function (req, res) {
         message: `${greeting}, ${username}`
     })
 
-    res.json({
-        message: `Hello, ${username}!`
-    })
+    // res.json({
+    //     message: `Hello, ${username}!`
+    // })
 });
 
 //POST

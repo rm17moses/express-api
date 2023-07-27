@@ -28,8 +28,16 @@ document.addEventListener('alpine:init', () => {
 
                 addGreeting(){
 
+                    return axios
+                                .post('http://localhost:4009/api/greet', {
+                                    "language": this.new_language,
+                                    "greeting": this.new_greet
+                                })
+                                .then(result => {
+                                    console.log(result.data)
+                                });
                 },
-                
+
             init() {
                 
                 this.greet();

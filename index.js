@@ -14,6 +14,7 @@ app.get("/", function (req, res) {
 
 const greetings = {
     'English': 'Hello',
+    if ()
 }
 
 //Call the API - http://localhost:4009/api/greet?username=Moses (Dynamic - uses question marks)

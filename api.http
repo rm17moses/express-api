@@ -17,10 +17,13 @@ Content-Type: application/json
 }
 
 ###
+GET http://localhost:4009/api/greet?language=Zulu&greeting=Sawubona
+
+###
 POST https://first-api-greet.onrender.com/api/greet
 Content-Type: application/json
 
 {
-    "language": "SeSotho",
-    "greeting": "Dumela"
+    "language": "French",
+    "greeting": "Bonjour"
 }

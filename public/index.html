@@ -18,32 +18,43 @@
 
     <div class="main" x-data="LanguageWidget" >
 
-        <div>
+        <div class="row">
+
+          <div class="col s3">
             <p>
                 <label>
                   <input name="group1" type="radio" x-model="language" value="English" id="English" />
                   <span>English</span>
                 </label>
               </p>
+            </div>
 
+            <div class="col s3">
               <p>
                 <label>
                   <input name="group1"  type="radio" x-model="language" value="SeSotho" id="SeSotho" />
                   <span>SeSotho</span>
                 </label>
               </p>
+            </div>
+
+            <div class="col s3">
               <p>
                 <label>
-                  <input name="group1"  type="radio" x-model="language" value="Zulu" id="Zulu" />
-                  <span>Zulu</span>
+                  <input name="group1"  type="radio" x-model="language" value="IsiZulu" id="IsiZulu" />
+                  <span>IsiZulu</span>
                 </label>
               </p>
+            </div>
+
+            <div class="col s3">
               <p>
                 <label>
-                  <input name="group1"  type="radio" x-model="language" value="French" id="French" />
-                  <span>French</span>
+                  <input name="group1"  type="radio" x-model="language" value="IsiXhosa" id="IsiXhosa" />
+                  <span>IsiXhosa</span>
                 </label>
               </p>
+            </div>
 <!--FROM Andre Workshop
             <input type="radio" x-model="language" value="English" id="English">
             <label for="English">English</label>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My API Greet Widget</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <script src="//unpkg.com/alpinejs" defer></script>
+     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="container">
+    <div class="teal lighten-2 z-depth-5">
+    <h3 class="heading"><em>My First API Greet Widget</em></h3>
+    </div>
+
+    <div class="main" x-data="{
+        username : ' ',
+        greeting : 'Hello',
+        language : 'English',
+        greet() {
+
+            //call the API and get greeting back
+
+            axios.get(`/api/greet?username=${this.username}&language=${this.language}`)
+            .then(result => {
+
+                if (result.data.error) {
+                    this.greeting = result.data.error
+                } else {
+                    this.greeting = result.data.message
+                }
+
+                this.greeting = result.data.message
+            })
+
+            this.greeting = this.username
+        }
+    }" >
+
+
+        <p x-text="greeting" ></p>
+
+        <div>
+            <p>
+                <label>
+                  <input name="group1" type="radio" x-model="language" value="English" id="English" />
+                  <span>English</span>
+                </label>
+              </p>
+
+              <p>
+                <label>
+                  <input name="group1"  type="radio" x-model="language" value="SeSotho" id="SeSotho" />
+                  <span>SeSotho</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input name="group1"  type="radio" x-model="language" value="Zulu" id="Zulu" />
+                  <span>Zulu</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input name="group1"  type="radio" x-model="language" value="French" id="French" />
+                  <span>French</span>
+                </label>
+              </p>
+<!--FROM Andre Workshop
+            <input type="radio" x-model="language" value="English" id="English">
+            <label for="English">English</label>
+            <input type="radio" x-model="language" value="SeSotho" id="SeSotho">
+            <label for="SeSotho">SeSotho</label>
+            <input type="radio" x-model="language" value="Zulu" id="Zulu">
+            <label for="Zulu">Zulu</label>
+-->
+        </div>
+
+        <div class="row">
+        <div class="input-field col s6">
+            <input id="username" type="text" x-model="username" class="validate">
+            <label for="username">Type your username</label>
+            <input type="button" value="Greet" x-on:click="greet()">
+          </div>
+        </div>
+
+        <div>
+            <h5>Add a language</h5>
+
+            <div class="row">
+                <div class="input-field col s6">
+                Language: <input type="text" x-model="new_language" placeholder="New Language">
+                </div>
+                <div class="input-field col s6">
+                Greeting: <input type="text" x-model="new_greet" placeholder="New Greeting">
+                </div>
+                <div class="col s12">
+                <button x-on:click="addGreeting()">Add Language</button>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+body {
+    background-color: lightyellow;
+}
+
+.heading {
+    text-align: center;
+    color: white;
+}
+
+.z-depth-5 {
+    height: 50px;
+}
+
+span {
+    color: black;
+}
+
+.main {
+    margin-top: 2em;
+}

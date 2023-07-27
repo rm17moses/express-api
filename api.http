@@ -1,0 +1,26 @@
+
+POST http://localhost:4009/api/greet
+Content-Type: application/json
+
+{
+    "language": "SeSotho",
+    "greeting": "Dumela"
+}
+
+###
+POST http://localhost:4009/api/greet
+Content-Type: application/json
+
+{
+    "language": "Zulu",
+    "greeting": "Sawubona"
+}
+
+###
+POST http://localhost:4009/api/greet
+Content-Type: application/json
+
+{
+    "language": "French",
+    "greeting": "Bonjour"
+}

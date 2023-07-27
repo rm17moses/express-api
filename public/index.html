@@ -19,6 +19,8 @@
         username : ' ',
         greeting : 'Hello',
         language : 'English',
+        new_language: '',
+        new_greet: '',
         greet() {
 
             //call the API and get greeting back
@@ -36,6 +38,11 @@
             })
 
             this.greeting = this.username
+        }
+
+        addGreeting() {
+            axios
+                .post
         }
     }" >
 
@@ -96,7 +103,7 @@
                 <div class="input-field col s6">
                 Greeting: <input type="text" x-model="new_greet" placeholder="New Greeting">
                 </div>
-                <div class="col s12">
+                <div>
                 <button x-on:click="addGreeting()">Add Language</button>
                 </div>
             </div>

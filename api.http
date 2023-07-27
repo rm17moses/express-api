@@ -17,10 +17,10 @@ Content-Type: application/json
 }
 
 ###
-POST http://localhost:4009/api/greet
+POST https://first-api-greet.onrender.com/api/greet
 Content-Type: application/json
 
 {
-    "language": "French",
-    "greeting": "Bonjour"
+    "language": "SeSotho",
+    "greeting": "Dumela"
 }
